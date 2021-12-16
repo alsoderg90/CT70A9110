@@ -1,0 +1,113 @@
+@import 'config';
+@import 'menu';
+
+.text-secondary {
+    color: $quaternary-color;
+}
+
+body {
+    margin: 0%;
+    background: linear-gradient(90deg, darken($primary-color,2) 50%, darken($primary-color,5) 50%);;
+    height: 100%;
+    position:relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+main {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display:block;
+    padding-bottom: 4.5em;
+
+    &#home {
+        h1 {
+            &:hover {
+                animation: .8s shake infinite alternate;
+                @keyframes shake {
+                    0% { transform: skewX(-15deg); }
+                    5% { transform: skewX(15deg); }
+                    10% { transform: skewX(-15deg); }
+                    15% { transform: skewX(15deg); }
+                    20% { transform: skewX(0deg); }
+                    100% { transform: skewX(0deg); }  
+                  }
+            }
+        }
+    }
+}
+
+h1, h2, h3 {
+    color: $secondary-color;
+
+}
+ 
+footer {
+    position: absolute;
+    height: 2.1em;
+    bottom: 0;
+    padding-bottom: 1em;
+    width: 100%;
+    text-align: center;
+    background-color: lighten($secondary-color,40);
+
+    i {
+        color: black;
+
+        &:hover {
+            @include easeOut(1s);
+            color: $tertiary-color;
+        }
+    } 
+} 
+
+.portrait {
+    background-color: linear-gradient(180deg, darken($primary-color,2) 10%, darken($primary-color,5));;
+}
+
+.card {
+    box-shadow: 0 5px 8px 0 $tertiary-color;
+    background-color: darken($primary-color, 10);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+.wrapper {
+    padding-top: 23vh;
+    padding-left: 25%;
+    padding-right: 5%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'card    about'
+    'card    about';
+    grid-template-columns: repeat(2, 1fr);
+
+    .bio-image {
+        grid-area: img;
+        margin-top: 10px;
+        max-width: 80%;
+        border-radius: 50%;
+        border: $tertiary-color 5px solid;
+    }
+    .about {
+        grid-area: about;
+        height: auto;
+        font-family: 'Playfair Display', serif;
+        font-weight: 500;
+        p {
+            color: $secondary-color;
+            font-weight: 500;
+        }
+    }
+}

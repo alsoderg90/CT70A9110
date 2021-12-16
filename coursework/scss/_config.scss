@@ -1,0 +1,10 @@
+$primary-color: #fff;
+$secondary-color: #333;
+$tertiary-color: rgb(216, 184, 4);
+$quaternary-color: rgb(194, 0, 0);
+$background-image: url('../img/b1.jpg');
+$background-opacity: 0.7;
+
+@mixin easeOut($time) {
+    transition: all $time ease-out;
+}
