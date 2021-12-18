@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'about';
 
 .text-secondary {
     color: $quaternary-color;
@@ -25,6 +26,72 @@ main {
     padding-bottom: 4.5em;
 
     &#home {
+        margin:0;
+        font-family: $font-playfair;
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 30%;
+        }
+
+        section {
+            padding: 3em;
+            height: 100vh;
+            position: relative;
+        }
+
+        blockquote {
+            font-size: 2em;
+            width: 30%;
+            margin-top: 17%;
+            position: absolute;
+        }
+
+        span {
+            width: 100%;
+            background: red;
+            display: block;
+            height: 5px;
+            margin-top: 20px;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        img:nth-of-type(1) {
+            width: 30%;
+            right: 6%;
+            top:10%;
+        }
+        img:nth-of-type(2) {
+            width: 50%;
+            height: 20%;
+            right: 55;
+            top:39%;
+        }
+        img:nth-of-type(3) {
+            width: 25%;
+            right: 40%;
+            top:29%;
+        }
+        section:nth-child(even) {
+            background: darken($primary-color, 5);
+        }
+        .sticky {
+            background: $primary-color;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border: 5px solid #000;
+            margin: auto;
+            top: 20%; right: 50%;
+          }
+    }
+
+    &#about {
         h1 {
             &:hover {
                 animation: .8s shake infinite alternate;
@@ -65,49 +132,3 @@ footer {
     } 
 } 
 
-.portrait {
-    background-color: linear-gradient(180deg, darken($primary-color,2) 10%, darken($primary-color,5));;
-}
-
-.card {
-    box-shadow: 0 5px 8px 0 $tertiary-color;
-    background-color: darken($primary-color, 10);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .title {
-    color: grey;
-    font-size: 18px;
-  }
-
-.wrapper {
-    padding-top: 23vh;
-    padding-left: 25%;
-    padding-right: 5%;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas: 
-    'card    about'
-    'card    about';
-    grid-template-columns: repeat(2, 1fr);
-
-    .bio-image {
-        grid-area: img;
-        margin-top: 10px;
-        max-width: 80%;
-        border-radius: 50%;
-        border: $tertiary-color 5px solid;
-    }
-    .about {
-        grid-area: about;
-        height: auto;
-        font-family: 'Playfair Display', serif;
-        font-weight: 500;
-        p {
-            color: $secondary-color;
-            font-weight: 500;
-        }
-    }
-}

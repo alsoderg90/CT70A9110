@@ -65,7 +65,7 @@
     width: 100%;
     text-align: left;
     background-color: #fff;
-    padding: 0.4em;
+    padding: 0.3em;
     transform: translate(0, -100px);
     transition: all 1s ease-out; }
     .menu .nav-item.show {
@@ -99,6 +99,51 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.46s; }
 
+.portrait {
+  background-color: linear-gradient(180deg, #fafafa 10%, #f2f2f2); }
+
+.card {
+  box-shadow: 0 5px 8px 0 #d8b804;
+  background-color: #e6e6e6;
+  max-width: 300px;
+  margin: auto;
+  text-align: center; }
+
+.title {
+  color: grey;
+  font-size: 18px; }
+
+.wrapper {
+  padding-top: 15vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'about card info' 'about card info';
+  grid-template-columns: repeat(3, 1fr); }
+  .wrapper .bio-image {
+    grid-area: img;
+    margin-top: 10px;
+    max-width: 80%;
+    border-radius: 50%;
+    border: #d8b804 5px solid; }
+  .wrapper .about {
+    grid-area: about;
+    height: auto;
+    font-family: "Playfair Display", serif;
+    font-weight: 500; }
+    .wrapper .about p {
+      color: #333;
+      font-weight: 500; }
+  .wrapper .info {
+    grid-area: info;
+    height: auto;
+    font-family: "Playfair Display", serif;
+    font-weight: 500; }
+    .wrapper .info p {
+      color: #333;
+      font-weight: 500; }
+
 .text-secondary {
   color: #c20000; }
 
@@ -118,7 +163,56 @@ main {
   overflow: hidden;
   display: block;
   padding-bottom: 4.5em; }
-  main#home h1:hover {
+  main#home {
+    margin: 0;
+    font-family: "Playfair Display", serif; }
+    main#home h2 {
+      font-size: 2em;
+      text-align: center;
+      margin-top: 30%; }
+    main#home section {
+      padding: 3em;
+      height: 100vh;
+      position: relative; }
+    main#home blockquote {
+      font-size: 2em;
+      width: 30%;
+      margin-top: 17%;
+      position: absolute; }
+    main#home span {
+      width: 100%;
+      background: red;
+      display: block;
+      height: 5px;
+      margin-top: 20px; }
+    main#home img {
+      position: absolute; }
+    main#home img:nth-of-type(1) {
+      width: 30%;
+      right: 6%;
+      top: 10%; }
+    main#home img:nth-of-type(2) {
+      width: 50%;
+      height: 20%;
+      right: 55;
+      top: 39%; }
+    main#home img:nth-of-type(3) {
+      width: 25%;
+      right: 40%;
+      top: 29%; }
+    main#home section:nth-child(even) {
+      background: #f2f2f2; }
+    main#home .sticky {
+      background: #fff; }
+    main#home #box {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      border: 5px solid #000;
+      margin: auto;
+      top: 20%;
+      right: 50%; }
+  main#about h1:hover {
     animation: .8s shake infinite alternate; }
 
 @keyframes shake {
@@ -151,40 +245,3 @@ footer {
     footer i:hover {
       transition: all 1s ease-out;
       color: #d8b804; }
-
-.portrait {
-  background-color: linear-gradient(180deg, #fafafa 10%, #f2f2f2); }
-
-.card {
-  box-shadow: 0 5px 8px 0 #d8b804;
-  background-color: #e6e6e6;
-  max-width: 300px;
-  margin: auto;
-  text-align: center; }
-
-.title {
-  color: grey;
-  font-size: 18px; }
-
-.wrapper {
-  padding-top: 23vh;
-  padding-left: 25%;
-  padding-right: 5%;
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 'card    about' 'card    about';
-  grid-template-columns: repeat(2, 1fr); }
-  .wrapper .bio-image {
-    grid-area: img;
-    margin-top: 10px;
-    max-width: 80%;
-    border-radius: 50%;
-    border: #d8b804 5px solid; }
-  .wrapper .about {
-    grid-area: about;
-    height: auto;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500; }
-    .wrapper .about p {
-      color: #333;
-      font-weight: 500; }
