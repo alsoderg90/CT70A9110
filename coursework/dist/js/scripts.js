@@ -38,8 +38,8 @@ const controller = new ScrollMagic.Controller();
 
 // Timeline animations
 tl.from("#blockquote", .5, {x:200, opacity:0});
-tl.from("#span", 1, {width:0}, "-1=");
-tl.from("#first", 1, {x:100, y:200, opacity:0}, "=-1");
+tl.from("#span", 1, {width:0}, "=-.5");
+tl.from("#first", 1, {x:100, y:200, opacity:0}, "=-1.2");
 tl.from("#second", 1, {x:-200, y:0, opacity:0}, "=-.7");
 
 const scene = new ScrollMagic.Scene({
@@ -53,8 +53,8 @@ const scene = new ScrollMagic.Scene({
 
 tl2.from("#box", .5,{opacity: 10, scale: 0}, "=-.8");
 tl2.to("#box", .5 ,{
-  right: "35%",
-  bottom: "50%",
+  right: "39%",
+  bottom: "36%",
   scale: 1.3,
   borderColor: "white",
   borderWidth: 5,
