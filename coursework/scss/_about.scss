@@ -1,22 +1,5 @@
-.portrait {
-    background-color: linear-gradient(180deg, darken($primary-color,2) 10%, darken($primary-color,5));;
-}
-
-.card {
-    box-shadow: 0 5px 8px 0 $tertiary-color;
-    background-color: darken($primary-color, 10);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .title {
-    color: grey;
-    font-size: 18px;
-  }
-
 .wrapper {
-    padding-top: 15vh;
+    padding-top: 5vh;
     padding-left: 5%;
     padding-right: 5%;
     display: grid;
@@ -26,21 +9,40 @@
     'about card info';
     grid-template-columns: repeat(3, 1fr);
 
-    .bio-image {
-        grid-area: img;
-        margin-top: 10px;
-        max-width: 80%;
-        border-radius: 50%;
-        border: $tertiary-color 5px solid;
-    }
+    .card {
+        box-shadow: 0 5px 8px 0 $tertiary-color;
+        background-color: darken($primary-color, 10);
+        width: 80%;
+        max-width: 20em;
+        margin: auto;
+        text-align: center;
+    
+        .title {
+            color: grey;
+            font-size: 1rem;
+          }
+    
+          .portrait {
+            background: darken($primary-color, 10);
+            
+            .bio-image {
+                grid-area: img;
+                margin-top: 10px;
+                max-width: 60%;
+                border-radius: 50%;
+                border: $tertiary-color 5px solid;
+            }
+       
+        }
+      }
+
     .about {
         grid-area: about;
-        height: auto;
         font-family: $font-playfair;
-        font-weight: 500;
         p {
             color: $secondary-color;
             font-weight: 500;
+            font-size: 1.3em;
         }
     }
 
@@ -49,6 +51,12 @@
         height: auto;
         font-family: $font-playfair;
         font-weight: 500;
+        .job {
+            background: darken($primary-color, 10);
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: $tertiary-color 5px solid;
+          }
         p {
             color: $secondary-color;
             font-weight: 500;

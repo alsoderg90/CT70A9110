@@ -2,60 +2,9 @@
     * {box-sizing:border-box}
 
     h2, h4 {
-        padding-left: 1em;
+        text-align: left;
+        padding-left: 2rem;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-    }
-    h2 {
-        padding-left: 0.5em;
-        font-size: 1em;
-    }
-
-    #banner {
-        position: relative;
-        z-index: 1;
-        height: 25%;
-        background-color: $tertiary-color;
-        clip-path: polygon(30% 0%, 100% 0, 100% 45%, 82% 69%, 51% 90%, 28% 89%, 0 100%, 0 0);
-        
-        .image {
-            position:relative;
-            display: inline-block;
-            width: 200px;
-            height: 50px;
-
-            img {
-                width: 100%;
-                position: absolute;
-                z-index: -1;
-    
-            }
-        }
-        #content {
-            position: relative;
-            z-index: 2;
-            left: 180px;
-            bottom: 60px;
-            padding:1.5em 1em;
-            h1 {
-                color: $tertiary-color;
-                margin: 0;
-                text-transform: uppercase;
-                font-size: .2em;
-                font-weight: 800;
-                opacity: .3;
-            }
-
-            .img-btn {
-                background-color: black;
-                padding: 2px 40px 2px 10px;
-                font-size: 1.5em;
-                display: inline-block;
-                text-decoration: none;
-                color: $tertiary-color;
-                clip-path: polygon(0 2%, 100% 0%, 75% 100%, 0% 100%);
-
-            }
-        }
     }
 
     section {
@@ -66,7 +15,7 @@
             margin-bottom: 0;
         }
         p {
-            font-size: 1.3em;
+            font-size: 2.5em;
             margin: 0 0 2em 0;
         }
         .projects-wrapper {
@@ -87,12 +36,12 @@
 
                 &:hover figcaption::before {
                     content: '';
-                    border-top: 35px solid ;
+                    border-top: 45px solid ;
                     position: absolute;
                     right: 0%;
                     top: 0%;
                     bottom: 10px;
-                    left: -15px;
+                    left: -75px;
                     height: 100%;
                     transform: rotateZ(-45deg) translate3d(0,-30%,0);
                     transition: transform .5s;
@@ -133,13 +82,13 @@
 
                 h3 {
                     font-weight: bold;
-                    font-size: 0.8em;
+                    font-size: 1.3em;
                     border-radius: 8px;
                     text-transform: uppercase;
                     color: $primary-color;
                     background: darken($secondary-color, 100);
                     display: inline-block;
-                    padding: .3em .7em;
+                    padding: .5em .7em;
                     margin: 0.4em 0.3em;
                 }
                 .additional {
@@ -150,8 +99,8 @@
 
                     p {
                         margin-bottom: 10px;
-                        margin-top: 5px;
-                        font-size: 0.6em;
+                        margin-top: 10px;
+                        font-size: .8em;
                     }
 
                     a {
@@ -161,7 +110,7 @@
                         padding: .4em;
                         color: darken($secondary-color,100);
                         border-radius: 4px;
-                        font-size: 0.7em;
+                        font-size: 1em;
                     }
 
                     a:last-child {

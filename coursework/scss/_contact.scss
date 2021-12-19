@@ -1,0 +1,174 @@
+.contact {
+    h1 {
+        font-family: $font-montserrat;
+    }
+
+    font-family: $font-playfair;
+    #content {
+        opacity: 0;
+    }
+
+    .animations {
+        display:grid;
+        grid-template-areas: 
+        "form contact-info"
+        "form contact-info";
+        grid-template-columns: repeat(2, 1fr);
+
+        .contact-info {
+            grid-area: contact-info;
+
+            .boxes {
+                display: inline-flex;
+                flex-flow: column wrap;
+                align-items: center;
+                margin-top: 1rem;
+
+                h1 {
+                    margin-bottom: 0;
+                }
+                
+              
+                .box {
+                  position: relative;
+                  font-size: 1rem;
+                  border-radius: 5px;
+                  top: 50px;
+                  z-index: 1;
+                  font-weight: 700;
+                  background-color: $tertiary-color;
+                  padding: 1rem 2rem;
+                  margin-bottom: 3rem;
+                  overflow: hidden;
+
+                  &:before, 
+                  &:after, 
+                  span:before, 
+                  span:after {
+                      content: "";
+                      position: absolute;
+                      z-index:-1;
+                      width: 25%;
+                      height: 100%;
+                      background-color: darken($secondary-color, 100);
+                      transition: all .5s;
+                  }
+
+                  &:before {
+                      top: 0;
+                      left: -25%
+                  }
+
+                  &:after {
+                      top: -100%;
+                      left:25%;
+                  }
+              
+                  &:hover:before {
+                      top: 0;
+                      left:0;
+                  }
+                  &:hover:after {
+                      top: 0;
+                      left: 25%
+                  }
+
+                  span:before {
+                      right: 25%;
+                      bottom:-100%
+
+                  }                 
+                  span:after {
+                    right: -25%;
+                    bottom:0%
+                  }
+                  &:hover span:before {
+                      right:25%;
+                      bottom:0;
+                  }
+
+                  &:hover span:after {
+                    right: 0%;
+                    bottom:0%
+                  }
+
+                  &:hover {
+                    color:$quaternary-color;
+                    span {
+                        color:$tertiary-color;
+                    }
+                  }
+                
+
+                }
+              }
+        }
+
+        .form {
+            font-weight: 450;
+            grid-area: form;
+            border-radius: 5px;
+            padding: 20px;
+            width: 35vh;
+            fieldset {
+                border: 0;
+            }
+    
+            input[type=text], textarea {
+                resize: none;
+                background-color: $tertiary-color;
+                font-size: 1em;
+                font-weight: 400;
+                font-family: $font-montserrat;
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid $tertiary-color;
+                border-radius: 4px;
+                box-sizing: border-box;
+              }
+              
+              button {
+                border: $tertiary-color solid 2px;
+                background: $tertiary-color;
+                z-index:0;
+                color: $secondary-color;
+                padding: 14px 20px;
+                font-size: 1em;
+                font-weight: 1000;
+                margin: 8px 0;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.5s;
+                position: relative;
+                overflow:hidden;
+                color:rgb(8, 8, 8);
+
+                &:hover {
+                    color: $tertiary-color;
+                }
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top:0;
+                    left: 0; 
+                    height: 0; 
+                    width: 100%;   
+                    background: darken($secondary-color, 100);
+                    z-index: -1;
+                    transition: all 0.5s;
+                    border-radius: 0 0 50% 50%;
+                }
+
+                &:hover:before {
+                    height: 190%;
+                }
+
+              }       
+          }      
+    }
+}
+
+

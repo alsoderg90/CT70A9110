@@ -33,6 +33,7 @@ function toggleMenu() {
 
 var tl = new TimelineMax({onUpdate:updatePercentage});
 var tl2 = new TimelineMax();
+var tl = new TimelineMax({onUpdate:updatePercentage2});
 const controller = new ScrollMagic.Controller();
 
 
@@ -72,3 +73,37 @@ function updatePercentage() {
 }
 
 
+
+var tla = new TimelineMax({onUpdate:updatePercentage});
+tla.fromTo(".menu-btn", 3, {rotation:0}, {rotation:180})
+
+const scene3 = new ScrollMagic.Scene({
+  triggerElement: ".index", 
+  triggerHook: "onLeave",
+  duration: "100%"
+})
+.setTween(tla)
+.addIndicators()
+  .addTo(controller);
+
+function updatePercentage2() {
+  console.log(tla.progress())
+  tla.progress();
+}
+
+
+// Animations on contact page
+var tl3 = new TimelineMax({onUpdate:updatePercentage});
+
+// Timeline animations
+tl3
+  .fromTo(".banner-animation", 3, {opacity:0}, {opacity:1, duration: 1})
+  .to("#content", 3, {opacity: 1, duration: 2.5, ease: "(0.7, 0.7, false)" }, 1.5)
+  .from('#form', 2, {x: -500, duration: 2.5}, "=-3")
+  .fromTo(".h2", 3, {opacity:0}, {opacity:1, duration: 1}, "=-2")
+  .fromTo('.box-1', 1, {rotation:-360,opacity:0}, 
+  {rotation:0,opacity:1, duration: 1, ease: "slow(0.7,0.7, false)"}, "-=1.9")
+  .fromTo('.box-2', 1, {rotation:-360,opacity:0}, 
+  {rotation:0,opacity:1, duration: 1, ease: "slow(0.7,0.7, false)"}, "-=1.7")
+  .fromTo('.box-3', 1, {rotation:-360,opacity:0}, 
+  {rotation:0,opacity:1, duration: 1, ease: "slow(0.7,0.7, false)"}, "-=1.3")

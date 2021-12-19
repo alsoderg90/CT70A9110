@@ -1,18 +1,18 @@
 .menu-btn {
     position: fixed;
     z-index: 3;
-    top: 13px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     cursor:pointer;
     @include easeOut(0.5s);
     &:hover > .btn-line {
-        background-color: $secondary-color;
+        background-color: $primary-color;
     }
 
     .btn-line {
         background: $quaternary-color;
         margin: 0 0 5px 0;  
-        width: 28px;
+        width: 38px;
         height: 3px;
         @include easeOut(0.5s);
     }
@@ -92,8 +92,8 @@
         display: inline-block;
         width: 100%;
         text-align:center;
-        background-color:$primary-color;
-        padding: 0.2em;
+        background-color: darken($secondary-color,100);
+        padding: 0em;
 
         transform: translate((0, -100px));
         @include easeOut(1s);
@@ -106,8 +106,8 @@
         display: inline-block;
         text-decoration: none;
         text-transform: capitalize;
-        color:$secondary-color;
-        font-size: large;
+        color:$primary-color;
+        font-size:1.5em;
         font-weight: 800;
         @include easeOut(1s);
 
@@ -117,12 +117,11 @@
 
         &:hover {
             color: $quaternary-color;
+            transform:scale(1.2) 
         }
     }
 
 }
-
-
 
 @for $x from 0 to 5 {
     .nav-item:nth-child(#{$x}) {

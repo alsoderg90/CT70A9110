@@ -2,10 +2,10 @@
 @import 'menu';
 @import 'about';
 @import 'projects';
+@import 'contact';
 
-
-.text-secondary {
-    color: $quaternary-color;
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -16,9 +16,50 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-  }
+.text-secondary {
+    color: $quaternary-color;
+}
+
+#banner {
+    position: relative;
+    z-index: 1;
+    height: 25%;
+    background-color: $tertiary-color;
+    clip-path: polygon(30% 0%, 100% 0, 100% 45%, 82% 69%, 51% 90%, 28% 89%, 0 100%, 0 0);
+    
+    .image {
+        position:relative;
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+
+        img {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+
+        }
+    }
+    #content {
+        position: relative;
+        z-index: 2;
+        left: 140px;
+        bottom: 20px;
+        padding:1.5em 1em;
+
+        .img-btn {
+            background-color: black;
+            padding: 2px 40px 2px 10px;
+            font-size: 1.5em;
+            display: inline-block;
+            font-family: $font-playfair;
+            text-decoration: none;
+            color: $tertiary-color;
+            clip-path: polygon(0 2%, 100% 0%, 75% 100%, 0% 100%);
+            transform: rotateZ(-15deg);
+        }
+    }
+}
 
 main {
     
@@ -41,54 +82,54 @@ main {
             padding: 3em;
             height: 100vh;
             position: relative;
-        }
 
-        blockquote {
-            font-size: 2em;
-            width: 30%;
-            margin-top: 7%;
-            position: absolute;
+            blockquote {
+                font-size: 2em;
+                width: 30%;
+                margin-top: 7%;
+                position: absolute;
+            }
+    
+            span {
+                width: 100%;
+                background: red;
+                display: block;
+                height: 5px;
+                margin-top: 20px;
+            }
+    
+            img {
+                position: absolute;
+            }
+    
+            img:nth-of-type(1) {
+                width: 20%;
+                height: 60%;
+                right: 15%;
+                top:10%;
+            }
+            img:nth-of-type(2) {
+                width: 35%;
+                height: 25%;
+                right: 50%;
+                top:49%;
+            }
+    
+            section:nth-child(even) {
+                background: darken($primary-color, 5);
+            }
+            .sticky {
+                background: $primary-color;
+            }
+            #box {
+                width: 150px;
+                height: 100px;
+                position: absolute;
+                border: 7px solid #000;
+                margin: auto;
+                top: 20%; right: 50%;
+              }
         }
-
-        span {
-            width: 100%;
-            background: red;
-            display: block;
-            height: 5px;
-            margin-top: 20px;
-        }
-
-        img {
-            position: absolute;
-        }
-
-        img:nth-of-type(1) {
-            width: 20%;
-            height: 60%;
-            right: 15%;
-            top:10%;
-        }
-        img:nth-of-type(2) {
-            width: 35%;
-            height: 25%;
-            right: 50%;
-            top:49%;
-        }
-
-        section:nth-child(even) {
-            background: darken($primary-color, 5);
-        }
-        .sticky {
-            background: $primary-color;
-        }
-        #box {
-            width: 150px;
-            height: 100px;
-            position: absolute;
-            border: 7px solid #000;
-            margin: auto;
-            top: 20%; right: 50%;
-          }
     }
 
     &#about {
@@ -107,20 +148,12 @@ main {
         }
     }
 
-    &#contact {
-        section {
-            height: 100vh;
 
-            &:first-child {
-
-            }
-        }
-    }
 }
 
 h1, h2, h3 {
     color: $secondary-color;
-
+    font-size: 2em;
 }
  
 footer {
