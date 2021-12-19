@@ -71,3 +71,4 @@ function updatePercentage() {
   tl.progress();
 }
 
+

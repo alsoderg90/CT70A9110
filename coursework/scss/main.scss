@@ -3,6 +3,7 @@
 @import 'about';
 @import 'projects';
 
+
 .text-secondary {
     color: $quaternary-color;
 }
@@ -20,6 +21,7 @@ body {
   }
 
 main {
+    
     position: relative;
     min-height: 100vh;
     overflow: hidden;
@@ -61,8 +63,8 @@ main {
         }
 
         img:nth-of-type(1) {
-            width: 25%;
-            height: 80%;
+            width: 20%;
+            height: 60%;
             right: 15%;
             top:10%;
         }
@@ -101,6 +103,16 @@ main {
                     20% { transform: skewX(0deg); }
                     100% { transform: skewX(0deg); }  
                   }
+            }
+        }
+    }
+
+    &#contact {
+        section {
+            height: 100vh;
+
+            &:first-child {
+
             }
         }
     }
