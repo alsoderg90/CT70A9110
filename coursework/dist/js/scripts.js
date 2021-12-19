@@ -33,15 +33,14 @@ function toggleMenu() {
 
 var tl = new TimelineMax({onUpdate:updatePercentage});
 var tl2 = new TimelineMax();
-var tl = new TimelineMax({onUpdate:updatePercentage2});
 const controller = new ScrollMagic.Controller();
 
 
 // Timeline animations
 tl.from("#blockquote", .5, {x:200, opacity:0});
 tl.from("#span", 1, {width:0}, "=-.5");
-tl.from("#first", 1, {x:100, y:200, opacity:0}, "=-1.2");
-tl.from("#second", 1, {x:-200, y:0, opacity:0}, "=-.7");
+tl.from("#first", 2, {x:100, y:200, opacity:0}, "=1.5");
+tl.from("#second", 2, {x:-200, y:0, opacity:0}, "=-.7");
 
 const scene = new ScrollMagic.Scene({
   triggerElement: ".sticky", 
@@ -72,28 +71,8 @@ function updatePercentage() {
   tl.progress();
 }
 
-
-
-var tla = new TimelineMax({onUpdate:updatePercentage});
-tla.fromTo(".menu-btn", 3, {rotation:0}, {rotation:180})
-
-const scene3 = new ScrollMagic.Scene({
-  triggerElement: ".index", 
-  triggerHook: "onLeave",
-  duration: "100%"
-})
-.setTween(tla)
-.addIndicators()
-  .addTo(controller);
-
-function updatePercentage2() {
-  console.log(tla.progress())
-  tla.progress();
-}
-
-
 // Animations on contact page
-var tl3 = new TimelineMax({onUpdate:updatePercentage});
+var tl3 = new TimelineMax();
 
 // Timeline animations
 tl3

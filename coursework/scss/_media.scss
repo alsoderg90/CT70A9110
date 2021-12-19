@@ -1,0 +1,284 @@
+// Widescreens
+@include mediaXl {
+  &#home {
+    font-family: $font-playfair;
+    section {
+      padding: 3em;
+      height: 100vh;
+      position: relative;
+
+      blockquote {
+          font-size: 2em;
+          width: 30%;
+          margin-top: 7%;
+          position: absolute;
+      }
+
+      span {
+          width: 75%;
+          background: red;
+          display: block;
+          height: 5px;
+          margin-top: 20px;
+      }
+
+      img {
+          position: absolute;
+      }
+
+      img:nth-of-type(1) {
+          width: 15%;
+          height: 60%;
+          right: 15%;
+          top:10%;
+      }
+      img:nth-of-type(2) {
+          width: 35%;
+          height: 25%;
+          right: 50%;
+          top:49%;
+      }
+
+      section:nth-child(even) {
+          background: darken($primary-color, 5);
+      }
+      .sticky {
+          background: $primary-color;
+      }
+      #box {
+          width: 150px;
+          height: 100px;
+          position: absolute;
+          border: 7px solid #000;
+          margin: auto;
+          top: 20%; right: 50%;
+        }
+  }
+  }
+}
+  
+  // Desktops & Laptops
+  @include mediaLg {
+    &#home {
+      font-family: $font-playfair;
+      h2 {
+        padding-top:15%;
+      }
+      section {
+        padding: 3em;
+        height: 100vh;
+        position: relative;
+  
+        blockquote {
+            font-size: 2em;
+            width: 30%;
+            margin-top: 7%;
+            position: absolute;
+        }
+  
+        span {
+            width: 100%;
+            background: red;
+            display: block;
+            height: 5px;
+            margin-top: 20px;
+        }
+  
+        img {
+            position: absolute;
+        }
+  
+        img:nth-of-type(1) {
+            width: 20%;
+            height: 60%;
+            right: 15%;
+            top:10%;
+        }
+        img:nth-of-type(2) {
+            width: 35%;
+            height: 25%;
+            right: 50%;
+            top:49%;
+        }
+  
+        section:nth-child(even) {
+            background: darken($primary-color, 5);
+        }
+        .sticky {
+            background: $primary-color;
+        }
+        #box {
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            border: 7px solid #000;
+            margin: auto;
+            top: 20%; right: 50%;
+          }
+    }
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+    .contact {        
+        .h2 {
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .animations {
+            display:grid;
+            grid-template-areas: 
+            "contact-info"
+            "form";
+            grid-template-columns: repeat(1, 1fr);
+
+            .form {
+                width: 60vh;
+                padding-right: 15%;
+                padding-left: 15%;
+                h1 {
+                    text-align: right;
+                }
+            }
+        }
+      }
+
+   .wrapper {
+    padding-top: 5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'card'
+    'about' 
+    'info';
+    grid-template-columns: repeat(1, 1fr);
+   }
+
+  &#home {
+    h2 {
+      color: orange;
+      padding-top:15vh;
+    }
+    font-family: $font-playfair;
+    section {
+      padding: 3em;
+      height: 100vh;
+      position: relative;
+
+      blockquote {
+          font-size: 2em;
+          width: 30%;
+          margin-top: 7%;
+          position: absolute;
+      }
+
+      span {
+          width: 200px;
+          background: red;
+          display: block;
+          height: 5px;
+          margin-top: 20px;
+      }
+
+      img {
+          position: absolute;
+      }
+
+      img:nth-of-type(1) {
+          width: 150px;
+          height: 350px;
+          right: 15%;
+          top:10%;
+      }
+      img:nth-of-type(2) {
+          width: 45%;
+          height: 15%;
+          right: 35%;
+          top:55%;
+      }
+
+      section:nth-child(even) {
+          background: darken($primary-color, 5);
+      }
+      .sticky {
+          background: $primary-color;
+      }
+      #box {
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          border: 7px solid #000;
+          margin: auto;
+          top: 15%; right: 50%;
+        }
+  }
+ }
+}
+
+// Smartphones
+@include mediaSm {
+
+  &#home {
+    h2 {
+      padding-top:15vh;
+      color:rgb(22, 141, 48);
+    }
+    font-family: $font-playfair;
+    section {
+      padding: 3em;
+      height: 100vh;
+      position: relative;
+
+      blockquote {
+          font-size: 2em;
+          margin-left: 0;
+          width: 30%;
+          margin-top: 7%;
+          position: absolute;
+      }
+
+      span {
+          width: 100%;
+          background: red;
+          display: block;
+          height: 5px;
+          margin-top: 20px;
+      }
+
+      img {
+          position: absolute;
+      }
+
+      img:nth-of-type(1) {
+          width: 150px;
+          height: 250px;
+          right: 15%;
+          top:10%;
+      }
+      img:nth-of-type(2) {
+          width: 55%;
+          height: 20%;
+          right: 20%;
+          top:49%;
+      }
+
+      section:nth-child(even) {
+          background: darken($primary-color, 5);
+      }
+      .sticky {
+          background: $primary-color;
+      }
+      #box {
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          border: 7px solid #000;
+          margin: auto;
+          top: 15%; right: 50%;
+        }
+  }
+ }
+}

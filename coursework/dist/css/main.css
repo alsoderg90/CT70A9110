@@ -111,6 +111,7 @@
     box-shadow: 0 5px 8px 0 #fcca45;
     background-color: #e6e6e6;
     width: 80%;
+    min-width: 200px;
     max-width: 20em;
     margin: auto;
     text-align: center; }
@@ -238,125 +239,123 @@
           color: #fff;
           margin-left: 5px; }
 
-.contact {
-  font-family: "Playfair Display", serif; }
-  .contact h1 {
-    font-family: "Montserrat", sans-serif; }
-  .contact #content {
-    opacity: 0; }
-  .contact .animations {
-    display: grid;
-    grid-template-areas: "form contact-info" "form contact-info";
-    grid-template-columns: repeat(2, 1fr); }
-    .contact .animations .contact-info {
-      grid-area: contact-info; }
-      .contact .animations .contact-info .boxes {
-        display: inline-flex;
-        flex-flow: column wrap;
-        align-items: center;
-        margin-top: 1rem; }
-        .contact .animations .contact-info .boxes h1 {
-          margin-bottom: 0; }
-        .contact .animations .contact-info .boxes .box {
-          position: relative;
-          font-size: 1rem;
-          border-radius: 5px;
-          top: 50px;
-          z-index: 1;
-          font-weight: 700;
-          background-color: #fcca45;
-          padding: 1rem 2rem;
-          margin-bottom: 3rem;
-          overflow: hidden; }
-          .contact .animations .contact-info .boxes .box:before, .contact .animations .contact-info .boxes .box:after,
-          .contact .animations .contact-info .boxes .box span:before,
-          .contact .animations .contact-info .boxes .box span:after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            width: 25%;
-            height: 100%;
-            background-color: black;
-            transition: all .5s; }
-          .contact .animations .contact-info .boxes .box:before {
-            top: 0;
-            left: -25%; }
-          .contact .animations .contact-info .boxes .box:after {
-            top: -100%;
-            left: 25%; }
-          .contact .animations .contact-info .boxes .box:hover:before {
-            top: 0;
-            left: 0; }
-          .contact .animations .contact-info .boxes .box:hover:after {
-            top: 0;
-            left: 25%; }
-          .contact .animations .contact-info .boxes .box span:before {
-            right: 25%;
-            bottom: -100%; }
-          .contact .animations .contact-info .boxes .box span:after {
-            right: -25%;
-            bottom: 0%; }
-          .contact .animations .contact-info .boxes .box:hover span:before {
-            right: 25%;
-            bottom: 0; }
-          .contact .animations .contact-info .boxes .box:hover span:after {
-            right: 0%;
-            bottom: 0%; }
-          .contact .animations .contact-info .boxes .box:hover {
-            color: #c20000; }
-            .contact .animations .contact-info .boxes .box:hover span {
-              color: #fcca45; }
-    .contact .animations .form {
-      font-weight: 450;
-      grid-area: form;
-      border-radius: 5px;
-      padding: 20px;
-      width: 35vh; }
-      .contact .animations .form fieldset {
-        border: 0; }
-      .contact .animations .form input[type=text], .contact .animations .form textarea {
-        resize: none;
-        background-color: #fcca45;
-        font-size: 1em;
-        font-weight: 400;
-        font-family: "Montserrat", sans-serif;
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #fcca45;
-        border-radius: 4px;
-        box-sizing: border-box; }
-      .contact .animations .form button {
-        border: #fcca45 solid 2px;
-        background: #fcca45;
-        z-index: 0;
-        color: #333;
-        padding: 14px 20px;
-        font-size: 1em;
-        font-weight: 1000;
-        margin: 8px 0;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.5s;
+.contact #content {
+  opacity: 0; }
+
+.contact .animations {
+  display: grid;
+  grid-template-areas: " form  contact-info " " form  contact-info ";
+  justify-content: space-evenly;
+  grid-template-columns: repeat(2, 1fr); }
+  .contact .animations .contact-info {
+    grid-area: contact-info; }
+    .contact .animations .contact-info .boxes {
+      padding-left: 15%;
+      padding-right: 5%;
+      display: inline-flex;
+      flex-flow: column wrap;
+      margin-top: 1rem; }
+      .contact .animations .contact-info .boxes h1 {
+        margin-bottom: 0; }
+      .contact .animations .contact-info .boxes .box {
         position: relative;
-        overflow: hidden;
-        color: #080808; }
-        .contact .animations .form button:hover {
-          color: #fcca45; }
-        .contact .animations .form button:before {
+        font-size: 1rem;
+        border-radius: 5px;
+        top: 50px;
+        z-index: 1;
+        font-weight: 700;
+        background-color: #fcca45;
+        padding: 1rem 2rem;
+        margin-bottom: 3rem;
+        overflow: hidden; }
+        .contact .animations .contact-info .boxes .box:before, .contact .animations .contact-info .boxes .box:after,
+        .contact .animations .contact-info .boxes .box span:before,
+        .contact .animations .contact-info .boxes .box span:after {
           content: "";
           position: absolute;
-          top: 0;
-          left: 0;
-          height: 0;
-          width: 100%;
-          background: black;
           z-index: -1;
-          transition: all 0.5s;
-          border-radius: 0 0 50% 50%; }
-        .contact .animations .form button:hover:before {
-          height: 190%; }
+          width: 25%;
+          height: 100%;
+          background-color: black;
+          transition: all .5s; }
+        .contact .animations .contact-info .boxes .box:before {
+          top: 0;
+          left: -25%; }
+        .contact .animations .contact-info .boxes .box:after {
+          top: -100%;
+          left: 25%; }
+        .contact .animations .contact-info .boxes .box:hover:before {
+          top: 0;
+          left: 0; }
+        .contact .animations .contact-info .boxes .box:hover:after {
+          top: 0;
+          left: 25%; }
+        .contact .animations .contact-info .boxes .box span:before {
+          right: 25%;
+          bottom: -100%; }
+        .contact .animations .contact-info .boxes .box span:after {
+          right: -25%;
+          bottom: 0%; }
+        .contact .animations .contact-info .boxes .box:hover span:before {
+          right: 25%;
+          bottom: 0; }
+        .contact .animations .contact-info .boxes .box:hover span:after {
+          right: 0%;
+          bottom: 0%; }
+        .contact .animations .contact-info .boxes .box:hover {
+          color: #c20000; }
+          .contact .animations .contact-info .boxes .box:hover span {
+            color: #fcca45; }
+  .contact .animations .form {
+    font-weight: 450;
+    grid-area: form;
+    border-radius: 5px;
+    padding-left: 5%;
+    width: 45vh; }
+    .contact .animations .form fieldset {
+      border: 0; }
+    .contact .animations .form input[type=text], .contact .animations .form textarea {
+      resize: none;
+      background-color: #fcca45;
+      font-size: 1em;
+      font-weight: 400;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #fcca45;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    .contact .animations .form button {
+      border: #fcca45 solid 2px;
+      background: #fcca45;
+      z-index: 0;
+      color: #333;
+      padding: 14px 20px;
+      font-size: 1em;
+      font-weight: 1000;
+      margin: 8px 0;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.5s;
+      position: relative;
+      overflow: hidden;
+      color: #080808; }
+      .contact .animations .form button:hover {
+        color: #fcca45; }
+      .contact .animations .form button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background: black;
+        z-index: -1;
+        transition: all 0.5s;
+        border-radius: 0 0 50% 50%; }
+      .contact .animations .form button:hover:before {
+        height: 190%; }
 
 * {
   box-sizing: border-box; }
@@ -410,51 +409,11 @@ main {
   display: block;
   padding-bottom: 4.5em; }
   main#home {
-    margin: 0;
     font-family: "Playfair Display", serif; }
     main#home h2 {
       font-size: 2em;
       text-align: center;
-      margin-top: 30%; }
-    main#home section {
-      padding: 3em;
-      height: 100vh;
-      position: relative; }
-      main#home section blockquote {
-        font-size: 2em;
-        width: 30%;
-        margin-top: 7%;
-        position: absolute; }
-      main#home section span {
-        width: 100%;
-        background: red;
-        display: block;
-        height: 5px;
-        margin-top: 20px; }
-      main#home section img {
-        position: absolute; }
-      main#home section img:nth-of-type(1) {
-        width: 20%;
-        height: 60%;
-        right: 15%;
-        top: 10%; }
-      main#home section img:nth-of-type(2) {
-        width: 35%;
-        height: 25%;
-        right: 50%;
-        top: 49%; }
-      main#home section section:nth-child(even) {
-        background: #f2f2f2; }
-      main#home section .sticky {
-        background: #fff; }
-      main#home section #box {
-        width: 150px;
-        height: 100px;
-        position: absolute;
-        border: 7px solid #000;
-        margin: auto;
-        top: 20%;
-        right: 50%; }
+      margin-top: 15%; }
   main#about h1:hover {
     animation: .8s shake infinite alternate; }
 
@@ -489,3 +448,205 @@ footer {
     footer i:hover {
       transition: all 1s ease-out;
       color: #fcca45; }
+
+@media screen and (min-width: 1171px) {
+  #home {
+    font-family: "Playfair Display", serif; }
+    #home section {
+      padding: 3em;
+      height: 100vh;
+      position: relative; }
+      #home section blockquote {
+        font-size: 2em;
+        width: 30%;
+        margin-top: 7%;
+        position: absolute; }
+      #home section span {
+        width: 75%;
+        background: red;
+        display: block;
+        height: 5px;
+        margin-top: 20px; }
+      #home section img {
+        position: absolute; }
+      #home section img:nth-of-type(1) {
+        width: 15%;
+        height: 60%;
+        right: 15%;
+        top: 10%; }
+      #home section img:nth-of-type(2) {
+        width: 35%;
+        height: 25%;
+        right: 50%;
+        top: 49%; }
+      #home section section:nth-child(even) {
+        background: #f2f2f2; }
+      #home section .sticky {
+        background: #fff; }
+      #home section #box {
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        border: 7px solid #000;
+        margin: auto;
+        top: 20%;
+        right: 50%; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  #home {
+    font-family: "Playfair Display", serif; }
+    #home h2 {
+      padding-top: 15%; }
+    #home section {
+      padding: 3em;
+      height: 100vh;
+      position: relative; }
+      #home section blockquote {
+        font-size: 2em;
+        width: 30%;
+        margin-top: 7%;
+        position: absolute; }
+      #home section span {
+        width: 100%;
+        background: red;
+        display: block;
+        height: 5px;
+        margin-top: 20px; }
+      #home section img {
+        position: absolute; }
+      #home section img:nth-of-type(1) {
+        width: 20%;
+        height: 60%;
+        right: 15%;
+        top: 10%; }
+      #home section img:nth-of-type(2) {
+        width: 35%;
+        height: 25%;
+        right: 50%;
+        top: 49%; }
+      #home section section:nth-child(even) {
+        background: #f2f2f2; }
+      #home section .sticky {
+        background: #fff; }
+      #home section #box {
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        border: 7px solid #000;
+        margin: auto;
+        top: 20%;
+        right: 50%; } }
+
+@media screen and (max-width: 768px) {
+  .contact .h2 {
+    text-align: left;
+    margin-bottom: 0; }
+  .contact .animations {
+    display: grid;
+    grid-template-areas: "contact-info" "form";
+    grid-template-columns: repeat(1, 1fr); }
+    .contact .animations .form {
+      width: 60vh;
+      padding-right: 15%;
+      padding-left: 15%; }
+      .contact .animations .form h1 {
+        text-align: right; }
+  .wrapper {
+    padding-top: 5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'card' 'about'  'info';
+    grid-template-columns: repeat(1, 1fr); }
+  #home {
+    font-family: "Playfair Display", serif; }
+    #home h2 {
+      color: orange;
+      padding-top: 15vh; }
+    #home section {
+      padding: 3em;
+      height: 100vh;
+      position: relative; }
+      #home section blockquote {
+        font-size: 2em;
+        width: 30%;
+        margin-top: 7%;
+        position: absolute; }
+      #home section span {
+        width: 200px;
+        background: red;
+        display: block;
+        height: 5px;
+        margin-top: 20px; }
+      #home section img {
+        position: absolute; }
+      #home section img:nth-of-type(1) {
+        width: 150px;
+        height: 350px;
+        right: 15%;
+        top: 10%; }
+      #home section img:nth-of-type(2) {
+        width: 45%;
+        height: 15%;
+        right: 35%;
+        top: 55%; }
+      #home section section:nth-child(even) {
+        background: #f2f2f2; }
+      #home section .sticky {
+        background: #fff; }
+      #home section #box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border: 7px solid #000;
+        margin: auto;
+        top: 15%;
+        right: 50%; } }
+
+@media screen and (max-width: 500px) {
+  #home {
+    font-family: "Playfair Display", serif; }
+    #home h2 {
+      padding-top: 15vh;
+      color: #168d30; }
+    #home section {
+      padding: 3em;
+      height: 100vh;
+      position: relative; }
+      #home section blockquote {
+        font-size: 2em;
+        margin-left: 0;
+        width: 30%;
+        margin-top: 7%;
+        position: absolute; }
+      #home section span {
+        width: 100%;
+        background: red;
+        display: block;
+        height: 5px;
+        margin-top: 20px; }
+      #home section img {
+        position: absolute; }
+      #home section img:nth-of-type(1) {
+        width: 150px;
+        height: 250px;
+        right: 15%;
+        top: 10%; }
+      #home section img:nth-of-type(2) {
+        width: 55%;
+        height: 20%;
+        right: 20%;
+        top: 49%; }
+      #home section section:nth-child(even) {
+        background: #f2f2f2; }
+      #home section .sticky {
+        background: #fff; }
+      #home section #box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border: 7px solid #000;
+        margin: auto;
+        top: 15%;
+        right: 50%; } }

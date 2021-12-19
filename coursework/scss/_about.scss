@@ -13,6 +13,7 @@
         box-shadow: 0 5px 8px 0 $tertiary-color;
         background-color: darken($primary-color, 10);
         width: 80%;
+        min-width: 200px;
         max-width: 20em;
         margin: auto;
         text-align: center;

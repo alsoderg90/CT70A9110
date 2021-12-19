@@ -4,6 +4,8 @@
 @import 'projects';
 @import 'contact';
 
+
+
 * {
     box-sizing: border-box;
 }
@@ -70,68 +72,15 @@ main {
     padding-bottom: 4.5em;
 
     &#home {
-        margin:0;
         font-family: $font-playfair;
         h2 {
             font-size: 2em;
             text-align: center;
-            margin-top: 30%;
+            margin-top: 15%;
         }
 
-        section {
-            padding: 3em;
-            height: 100vh;
-            position: relative;
 
-            blockquote {
-                font-size: 2em;
-                width: 30%;
-                margin-top: 7%;
-                position: absolute;
-            }
-    
-            span {
-                width: 100%;
-                background: red;
-                display: block;
-                height: 5px;
-                margin-top: 20px;
-            }
-    
-            img {
-                position: absolute;
-            }
-    
-            img:nth-of-type(1) {
-                width: 20%;
-                height: 60%;
-                right: 15%;
-                top:10%;
-            }
-            img:nth-of-type(2) {
-                width: 35%;
-                height: 25%;
-                right: 50%;
-                top:49%;
-            }
-    
-            section:nth-child(even) {
-                background: darken($primary-color, 5);
-            }
-            .sticky {
-                background: $primary-color;
-            }
-            #box {
-                width: 150px;
-                height: 100px;
-                position: absolute;
-                border: 7px solid #000;
-                margin: auto;
-                top: 20%; right: 50%;
-              }
-        }
     }
-
     &#about {
         h1 {
             &:hover {
@@ -147,8 +96,6 @@ main {
             }
         }
     }
-
-
 }
 
 h1, h2, h3 {
@@ -173,5 +120,11 @@ footer {
             color: $tertiary-color;
         }
     } 
-} 
+}
+
+@import 'media';
+
+
+
+
 

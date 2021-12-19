@@ -1,9 +1,4 @@
 .contact {
-    h1 {
-        font-family: $font-montserrat;
-    }
-
-    font-family: $font-playfair;
     #content {
         opacity: 0;
     }
@@ -11,17 +6,19 @@
     .animations {
         display:grid;
         grid-template-areas: 
-        "form contact-info"
-        "form contact-info";
+        " form  contact-info "
+        " form  contact-info ";
+        justify-content: space-evenly;
         grid-template-columns: repeat(2, 1fr);
 
         .contact-info {
             grid-area: contact-info;
 
             .boxes {
+                padding-left: 15%;
+                padding-right: 5%;
                 display: inline-flex;
                 flex-flow: column wrap;
-                align-items: center;
                 margin-top: 1rem;
 
                 h1 {
@@ -108,8 +105,8 @@
             font-weight: 450;
             grid-area: form;
             border-radius: 5px;
-            padding: 20px;
-            width: 35vh;
+            padding-left: 5%;
+            width: 45vh;
             fieldset {
                 border: 0;
             }
@@ -119,7 +116,6 @@
                 background-color: $tertiary-color;
                 font-size: 1em;
                 font-weight: 400;
-                font-family: $font-montserrat;
                 width: 100%;
                 padding: 12px 20px;
                 margin: 8px 0;
