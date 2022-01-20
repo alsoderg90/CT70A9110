@@ -250,12 +250,13 @@
   display: grid;
   grid-template-areas: " form  contact-info " " form  contact-info ";
   justify-content: space-evenly;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  min-width: 25em; }
   .contact .animations .contact-info {
     grid-area: contact-info; }
     .contact .animations .contact-info .boxes {
       padding-left: 15%;
-      padding-right: 5%;
+      padding-right: 10%;
       display: inline-flex;
       flex-flow: column wrap;
       margin-top: 1rem; }
@@ -271,7 +272,8 @@
         background-color: #fcca45;
         padding: 1rem 2rem;
         margin-bottom: 3rem;
-        overflow: hidden; }
+        overflow: hidden;
+        word-wrap: break-word; }
         .contact .animations .contact-info .boxes .box:before, .contact .animations .contact-info .boxes .box:after,
         .contact .animations .contact-info .boxes .box span:before,
         .contact .animations .contact-info .boxes .box span:after {
@@ -314,7 +316,8 @@
     font-weight: 450;
     grid-area: form;
     border-radius: 5px;
-    padding-left: 5%; }
+    padding-left: 5%;
+    width: 25em; }
     .contact .animations .form fieldset {
       border: 0; }
     .contact .animations .form input[type=text], .contact .animations .form textarea {
@@ -674,4 +677,24 @@ footer {
             background: none;
             border: 1px solid #fff;
             color: #fff;
-            margin-left: 5px; } }
+            margin-left: 5px; }
+  .contact .h2 {
+    text-align: left;
+    margin-bottom: 0; }
+  .contact .animations {
+    display: grid;
+    grid-template-areas: "contact-info" "form";
+    grid-template-columns: repeat(1, 1fr);
+    min-width: 80vh; }
+    .contact .animations .form {
+      width: 80vh;
+      padding-right: 15%;
+      padding-left: 5%; }
+      .contact .animations .form #heading {
+        padding-top: 2em; }
+    .contact .animations .contact-info .boxes {
+      padding-left: 5%; }
+      .contact .animations .contact-info .boxes .box {
+        font-size: .8rem;
+        padding: .5rem 1rem;
+        margin-bottom: 1rem; } }
