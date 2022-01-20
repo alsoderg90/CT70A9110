@@ -2,20 +2,20 @@
     .animations {
         display:grid;
         grid-template-areas: 
-        " form  contact-info "
-        " form  contact-info ";
+        " form contact-info "
+        " form contact-info ";
         justify-content: space-evenly;
         grid-template-columns: repeat(2, 1fr);
+        min-width: 25em;
 
         .contact-info {
             grid-area: contact-info;
 
             .boxes {
                 padding-left: 15%;
-                padding-right: 5%;
+                padding-right: 10%;
                 display: inline-flex;
                 flex-flow: column wrap;
-                margin-top: 1rem;
 
                 h1 {
                     margin-bottom: 0;
@@ -33,7 +33,9 @@
                   padding: 1rem 2rem;
                   margin-bottom: 3rem;
                   overflow: hidden;
-
+                  word-wrap: break-word;
+                  
+                  // tips from https://www.packtpub.com/product/creative-css-animations-transitions-and-transforms-course-updated-for-2021-video/9781801071055
                   &:before, 
                   &:after, 
                   span:before, 
@@ -91,8 +93,6 @@
                         color:$tertiary-color;
                     }
                   }
-                
-
                 }
               }
         }
@@ -102,6 +102,7 @@
             grid-area: form;
             border-radius: 5px;
             padding-left: 5%;
+            width: 25em;
             fieldset {
                 border: 0;
             }
