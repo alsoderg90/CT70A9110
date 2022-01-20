@@ -258,8 +258,7 @@
       padding-left: 15%;
       padding-right: 10%;
       display: inline-flex;
-      flex-flow: column wrap;
-      margin-top: 1rem; }
+      flex-flow: column wrap; }
       .contact .animations .contact-info .boxes h1 {
         margin-bottom: 0; }
       .contact .animations .contact-info .boxes .box {
@@ -465,9 +464,9 @@ footer {
     grid-template-areas: "contact-info" "form";
     grid-template-columns: repeat(1, 1fr); }
     .contact .animations .form {
-      width: 80vh;
       padding-right: 15%;
-      padding-left: 15%; }
+      padding-left: 15%;
+      width: 100vh; }
       .contact .animations .form h1 {
         text-align: right; }
     .contact .animations .boxes .box {
@@ -684,17 +683,16 @@ footer {
   .contact .animations {
     display: grid;
     grid-template-areas: "contact-info" "form";
-    grid-template-columns: repeat(1, 1fr);
-    min-width: 80vh; }
+    grid-template-columns: repeat(1, 1fr); }
     .contact .animations .form {
-      width: 80vh;
-      padding-right: 15%;
-      padding-left: 5%; }
+      padding-left: 0em;
+      width: 50vh; }
       .contact .animations .form #heading {
         padding-top: 2em; }
     .contact .animations .contact-info .boxes {
-      padding-left: 5%; }
+      padding-left: .5em; }
       .contact .animations .contact-info .boxes .box {
         font-size: .8rem;
+        width: 50vh;
         padding: .5rem 1rem;
         margin-bottom: 1rem; } }
