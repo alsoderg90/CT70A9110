@@ -43,8 +43,8 @@ body {
     #content {
         position: relative;
         z-index: 2;
-        left: 140px;
-        bottom: 20px;
+        left: 135px;
+        top: 0px;
         padding:1.5em 1em;
 
         .img-btn {
@@ -55,8 +55,7 @@ body {
             font-family: $font-playfair;
             text-decoration: none;
             color: $tertiary-color;
-            clip-path: polygon(0 2%, 100% 0%, 75% 100%, 0% 100%);
-            transform: rotateZ(-15deg);
+            clip-path: polygon(0 2%, 100% 0%, 85% 100%, 0% 100%);
         }
     }
 }

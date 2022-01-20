@@ -11,16 +11,10 @@ $font-montserrat: 'Montserrat', sans-serif;
 @mixin easeOut($time) {
     transition: all $time ease-out;
 }
-
-// Media Query Mixins
-@mixin mediaSm {
-    @media screen and (max-width: 500px) {
-      @content;
-    }
-  }
   
-  @mixin mediaMd {
-    @media screen and (max-width: 768px) {
+// Media Query Mixins  
+  @mixin mediaXl {
+    @media screen and (min-width: 1171px) {
       @content;
     }
   }
@@ -30,9 +24,16 @@ $font-montserrat: 'Montserrat', sans-serif;
       @content;
     }
   }
-  
-  @mixin mediaXl {
-    @media screen and (min-width: 1171px) {
+
+
+@mixin mediaMd {
+  @media screen and (min-width: 401px) and (max-width: 768px) {
+    @content;
+  }
+}  
+
+  @mixin mediaSm {
+    @media screen and (max-width: 400px) {
       @content;
     }
   }
